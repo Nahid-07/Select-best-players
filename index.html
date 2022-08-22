@@ -6,18 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Select-best-palyers</title>
 </head>
 
 <body>
+    <!-- page header markup -->
     <header class="page-header">
         <img src="images/Group 12.png" alt="">
-        <h1 class="title">Select your best players</h1>
-        <img src="images/Group 12.png" alt="">
+        <h1 class="title">Get the best players</h1>
+        <img src="images/Banner Image.png" alt="">
     </header>
+    <!-- main part markUp -->
     <main class="container">
         <div class="aside-parent">
-            <div  class="aside-left-side-parent">
+            <div class="aside-left-side-parent">
+                <!-- cards mark up -->
                 <aside class="left-side">
                     <div class="card">
                         <div class="card-img">
@@ -103,19 +106,30 @@
                             <button onclick="getButtons(this)" type="submit" class="calc">Select</button>
                         </div>
                     </div>
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="images/Zinedine-Zidane-ball-final-World-Cup-Italy-2006.webp" alt="">
+                        </div>
+                        <div class="card-text">
+                            <h3>Angel D-Maria</h3>
+                            <p>36 Goals & 120 Assist</p>
+                            <button onclick="getButtons(this)" type="submit" class="calc">Select</button>
+                        </div>
+                    </div>
                 </aside>
             </div>
+            <!-- aside right markup -->
             <aside class="right-side">
                 <div class="sidebar-1">
                     <h2 class="select-title">Select Player</h2>
                     <ol id="list-item">
-                        
+
                     </ol>
                 </div>
                 <div class="sidebar-2">
                     <h2>Budget</h2>
                     <div class="player-cost">
-                        <h4 >Per player</h4>
+                        <h4>Per player</h4>
                         <input id="per-player-field" type="text" class="input" placeholder="Per Player 1000">
                     </div>
                     <button id="btn-expense" type="submit" class="calc">Calculate</button>
@@ -124,11 +138,11 @@
                         <h3 id="total-player-cost">0</h3>
                     </div>
                     <div class="player-cost margin">
-                        <h4 >Manager</h4>
+                        <h4>Manager</h4>
                         <input id="manger-cost-field" type="text" class="input">
                     </div>
                     <div class="player-cost margin">
-                        <h4 >Coach</h4>
+                        <h4>Coach</h4>
                         <input id="coach-cost-field" type="text" class="input">
                     </div>
                     <button id="btn-over-all-cost" type="submit" class="calc">Calculate</button>
@@ -137,14 +151,16 @@
                         <h3 class="amount-color">$<span id="total-cost-of-all">0</span> </h3>
                     </div>
                 </div>
-                
+
             </aside>
         </div>
     </main>
     <hr>
+    <!-- footer start -->
     <footer>
         <p>Copyright @ 2022 All Rights Reserved.</p>
     </footer>
+    <!-- script connection -->
     <script src="js/scripts.js"></script>
 </body>
 
