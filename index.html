@@ -17,16 +17,16 @@
     </header>
     <main class="container">
         <div class="aside-parent">
-            <div class="aside-left-side-parent">
+            <div id="get-buttons" class="aside-left-side-parent">
                 <aside class="left-side">
                     <div class="card">
                         <div class="card-img">
                             <img src="images/messi.png" alt="">
                         </div>
                         <div class="card-text">
-                            <h3>Lionel Messi</h3>
+                            <h3 class="name">Lionel Messi</h3>
                             <p>36 Goals & 120 Assist</p>
-                            <button type="submit" class="calc">Select</button>
+                            <button onclick="getButtons(this)" type="submit" class="calc">Select</button>
                         </div>
                     </div>
                     <div class="card">
@@ -36,7 +36,7 @@
                         <div class="card-text">
                             <h3>Neymar Jr</h3>
                             <p>36 Goals & 120 Assist</p>
-                            <button type="submit" class="calc">Select</button>
+                            <button onclick="getButtons(this)" type="submit" class="calc">Select</button>
                         </div>
                     </div>
                     <div class="card">
@@ -46,7 +46,7 @@
                         <div class="card-text">
                             <h3>Kylian Mbappé</h3>
                             <p>36 Goals & 120 Assist</p>
-                            <button type="submit" class="calc">Select</button>
+                            <button onclick="getButtons(this)" type="submit" class="calc">Select</button>
                         </div>
                     </div>
                 </aside>
@@ -58,7 +58,7 @@
                         <div class="card-text">
                             <h3>Vítor Machado</h3>
                             <p>36 Goals & 120 Assist</p>
-                            <button type="submit" class="calc">Select</button>
+                            <button onclick="getButtons(this)" type="submit" class="calc">Select</button>
                         </div>
                     </div>
                     <div class="card">
@@ -68,7 +68,7 @@
                         <div class="card-text">
                             <h3>sergio-Ramos</h3>
                             <p>36 Goals & 120 Assist</p>
-                            <button type="submit" class="calc">Select</button>
+                            <button onclick="getButtons(this)" type="submit" class="calc">Select</button>
                         </div>
                     </div>
                     <div class="card">
@@ -78,7 +78,7 @@
                         <div class="card-text">
                             <h3>Renato Sanches</h3>
                             <p>36 Goals & 120 Assist</p>
-                            <button type="submit" class="calc">Select</button>
+                            <button onclick="getButtons(this)" type="submit" class="calc">Select</button>
                         </div>
                     </div>
                 </aside>
@@ -90,7 +90,7 @@
                         <div class="card-text">
                             <h3>Romelu Menama Lukaku Bolingoli</h3>
                             <p>36 Goals & 120 Assist</p>
-                            <button type="submit" class="calc">Select</button>
+                            <button onclick="getButtons(this)" type="submit" class="calc">Select</button>
                         </div>
                     </div>
                     <div class="card">
@@ -100,7 +100,7 @@
                         <div class="card-text">
                             <h3>Angel D-Maria</h3>
                             <p>36 Goals & 120 Assist</p>
-                            <button type="submit" class="calc">Select</button>
+                            <button onclick="getButtons(this)" type="submit" class="calc">Select</button>
                         </div>
                     </div>
                 </aside>
@@ -108,12 +108,8 @@
             <aside class="right-side">
                 <div class="sidebar-1">
                     <h2 class="select-title">Select Player</h2>
-                    <ol>
-                        <li>messi</li>
-                        <li>messi</li>
-                        <li>messi</li>
-                        <li>messi</li>
-                        <li>messi</li>
+                    <ol id="list-item">
+                        
                     </ol>
                 </div>
                 <div class="sidebar-2">
@@ -122,7 +118,7 @@
                         <h4 >Per player</h4>
                         <input type="text" class="input">
                     </div>
-                    <button type="submit" class="calc">Calculate</button>
+                    <button id="btn-expense" type="submit" class="calc">Calculate</button>
                     <div class="player-cost margin">
                         <h3> Player Expense</h3>
                         <h3>0</h3>
@@ -149,6 +145,7 @@
     <footer>
         <p>Copyright @ 2022 All Rights Reserved.</p>
     </footer>
+    <script src="js/scripts.js"></script>
 </body>
 
 </html>
