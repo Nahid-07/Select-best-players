@@ -12,11 +12,16 @@ function covertTextToNumber(elementId){
     const CostFieldInput = parseInt(CostFieldString);
     return CostFieldInput
 }
+
+
+// event handler for buttons
 function getButtons(elementId){
     const PlayerName = elementId.parentNode.children[0].innerText;
     const playerObject = {
         PlayerName : PlayerName
     };
+    elementId.style.backgroundColor = '#111631'
+    elementId.disabled = true;
     const listContainer = document.getElementById('list-item');
     const listItems = document.createElement('li');
     listItems.innerText = playerObject.PlayerName;
@@ -27,14 +32,24 @@ function getButtons(elementId){
     }
     listContainer.append(listItems);
 }
+
+// getting player field value and count total
+
 document.getElementById("btn-expense").addEventListener('click',function(){
-    const playerNumber = getInputFields('per-player-field')
+    const playerNumber = getInputFields('per-player-field');
+    
+    if(isNaN(playerNumber)){
+        alert('Please enter amount');
+        return;
+    }
     const total = playerNumber*playerArray.length;
     const totalNumber = parseInt(total)
     const totalPlayerCost = document.getElementById('total-player-cost');
     totalPlayerCost.innerText = totalNumber;
-    console.log(totalNumber)
 })
+
+// in this function calculating over all cost
+
 document.getElementById('btn-over-all-cost').addEventListener('click',function(){
     const mangerCostFieldInput = covertTextToNumber('manger-cost-field');
     const coachCostFieldInput = covertTextToNumber('coach-cost-field')

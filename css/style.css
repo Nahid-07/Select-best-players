@@ -56,9 +56,8 @@ body{
     background-color: #015196;
     color: #fff;
     font-size: 18px;
+    cursor: pointer;
 }
-
-
 .sidebar-1{
     color: #fff;
     width: 300px;
