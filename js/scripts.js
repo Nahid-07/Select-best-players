@@ -4,13 +4,13 @@ function getInputFields(elementId){
     const playerField = document.getElementById(elementId);
     const playerInputString = playerField.value;
     const playerInputNumber = parseInt(playerInputString);
-    return playerInputNumber
+    return playerInputNumber;
 }
 // common function 2
 function covertTextToNumber(elementId){
     const CostFieldString = getInputFields(elementId);
     const CostFieldInput = parseInt(CostFieldString);
-    return CostFieldInput
+    return CostFieldInput;
 }
 
 
@@ -41,6 +41,9 @@ document.getElementById("btn-expense").addEventListener('click',function(){
     if(isNaN(playerNumber)){
         alert('Please enter amount');
         return ;
+    }else if(Math.sign(playerNumber) === -1){
+        alert('please enter valid number');
+        return;
     }
     const total = playerNumber*playerArray.length;
     const totalNumber = parseInt(total)
