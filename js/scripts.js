@@ -20,8 +20,6 @@ function getButtons(elementId){
     const playerObject = {
         PlayerName : PlayerName
     };
-    elementId.style.backgroundColor = '#111631'
-    elementId.disabled = true;
     const listContainer = document.getElementById('list-item');
     const listItems = document.createElement('li');
     listItems.innerText = playerObject.PlayerName;
@@ -29,6 +27,8 @@ function getButtons(elementId){
         alert('Sorry you cannot select more than 5');
         return;
     }
+    elementId.style.backgroundColor = '#111631'
+    elementId.disabled = true;
     playerArray.push(listItems)
     listContainer.append(listItems);
 }
