@@ -25,11 +25,11 @@ function getButtons(elementId){
     const listContainer = document.getElementById('list-item');
     const listItems = document.createElement('li');
     listItems.innerText = playerObject.PlayerName;
-    playerArray.push(listItems)
-    if(playerArray.length >5){
+    if(playerArray.length >=5){
         alert('Sorry you cannot select more than 5');
         return;
     }
+    playerArray.push(listItems)
     listContainer.append(listItems);
 }
 
@@ -40,7 +40,7 @@ document.getElementById("btn-expense").addEventListener('click',function(){
     
     if(isNaN(playerNumber)){
         alert('Please enter amount');
-        return;
+        return ;
     }
     const total = playerNumber*playerArray.length;
     const totalNumber = parseInt(total)
